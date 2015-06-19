@@ -56,14 +56,15 @@ module.exports = function (grunt) {
                     optimization: 2
                 },
                 files: {
-                    "app/styles/style.css": "app/less/style.less"
+                    "app/styles/style.css": "app/less/style.less",
+                    "app/css/eirenerx.css": "app/css/eirenerx.less"
                 }
             }
         },
         // Watch for changes in live edit
         watch: {
             styles: {
-                files: ['app/less/**/*.less'],
+                files: ['app/less/**/*.less', 'app/css/*.less'],
                 tasks: ['less', 'copy:styles'],
                 options: {
                     nospawn: true,
@@ -121,7 +122,9 @@ module.exports = function (grunt) {
                             '*.html',
                             'views/{,*/}*.html',
                             'styles/img/*.*',
-                            'images/{,*/}*.*'
+                            'images/{,*/}*.*',
+                            'css/*.css',
+                            'fonts/*.*'
                         ]
                     },
                     {
