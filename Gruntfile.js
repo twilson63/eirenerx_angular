@@ -56,8 +56,7 @@ module.exports = function (grunt) {
                     optimization: 2
                 },
                 files: {
-                    "app/styles/style.css": "app/less/style.less",
-                    "app/css/eirenerx.css": "app/css/eirenerx.less"
+                    "app/styles/style.css": "app/less/style.less"
                 }
             }
         },
@@ -123,7 +122,6 @@ module.exports = function (grunt) {
                             'views/{,*/}*.html',
                             'styles/img/*.*',
                             'images/{,*/}*.*',
-                            'css/*.css',
                             'fonts/*.*'
                         ]
                     },
